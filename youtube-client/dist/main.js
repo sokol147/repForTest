@@ -124,10 +124,10 @@ function () {
     key: "startDrag",
     value: function startDrag(e) {
       if (e.touches) {
-        if (e.touches.length < 1) {
-          e = e.touches[0];
-        } else {
+        if (e.touches.length > 1) {
           return;
+        } else {
+          e = e.touches[0];
         }
       }
 
